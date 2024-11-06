@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'ExtraLight';
+  src:
+    local('Geist-ExtraLight'),
+    url('./assets/fonts/Geist-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Light';
+  src:
+    local('Geist-Light'),
+    url('./assets/fonts/Geist-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Thin';
+  src:
+    local('Geist-Thin'),
+    url('./assets/fonts/Geist-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Medium';
+  src:
+    local('Geist-Medium'),
+    url('./assets/fonts/Geist-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Regular';
+  src:
+    local('Geist-Regular'),
+    url('./assets/fonts/Geist-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SemiBold';
+  src:
+    local('Geist-SemiBold'),
+    url('./assets/fonts/Geist-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bold';
+  src:
+    local('Geist-Bold'),
+    url('./assets/fonts/Geist-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ExtraBold';
+  src:
+    local('Geist-ExtraBold'),
+    url('./assets/fonts/Geist-ExtraBold.ttf') format('truetype');
+}
+
+/* Css reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* My own stuff */
+:root {
+  --system-ui: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  font-family: 'Regular', var(--system-ui);
+}
+
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10vh);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10vh);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+
+.slide {
+  -webkit-animation: slide 0.6s cubic-bezier(0.2, 0.6, 0.2, 1);
+  -moz-animation: slide 0.6s cubic-bezier(0.2, 0.6, 0.2, 1);
+  animation: slide 0.6s cubic-bezier(0.2, 0.6, 0.2, 1);
+  -webkit-animation-fill-mode: backwards;
+  -moz-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+}
+
+.delay01 {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+.delay02 {
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+.delay03 {
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+}
+
+.image-container {
+  overflow: hidden;
+  border-radius: 20px;
+  transition: .8s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.image-container:hover {
+  transform: scale(0.95);
+  cursor: pointer;
+}
+
+.project-image {
+  transition: .8s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.project-image:hover {
+  transform: scale(calc(1/0.97));
+}
+
+a:hover {
+  text-decoration: underline;
+}

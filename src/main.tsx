@@ -6,6 +6,7 @@ import Project from './project.tsx'
 import {
   createBrowserRouter,
   RouterProvider,
+  Navigate,
 } from "react-router-dom";
 import './index.css'
 
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <Work />
+    element: <Navigate to="/" replace />
   },
 ]);
 

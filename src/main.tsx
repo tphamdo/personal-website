@@ -4,13 +4,13 @@ import About from './about.tsx'
 import Work from './work.tsx'
 import Project from './project.tsx'
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
   Navigate,
 } from "react-router-dom";
 import './index.css'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Work />

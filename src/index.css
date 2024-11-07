@@ -198,3 +198,17 @@ body {
 a:hover {
   text-decoration: underline;
 }
+
+.video-container {
+  -webkit-transform: translateZ(0);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
+  border: 1px solid rgb(200,200,200);
+}
+
+.rotating-icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.rotating-icon:hover {
+  transform: rotate(360deg);
+}

@@ -14,9 +14,17 @@ function Work() {
 
       <div className="flex flex-wrap justify-center justify-around slide delay01 mt-24">
         {projects.map((project, idx) => (
-          <Link to={`work/${project.name}`} key={idx} className="project-container text-center hover:no-underline">
-            <div className="image-container max-h-[400px] aspect-square border-black border-[1px]">
-              <img className="project-image h-full" src={project.img} alt="project picture" />
+          <Link
+            to={`work/${project.name}`}
+            key={idx}
+            className="project-container text-center hover:no-underline"
+          >
+            <div className="image-container max-h-[450px] aspect-square border-black border-[1px]">
+              <img
+                className="project-image h-full"
+                src={project.img}
+                alt="project picture"
+              />
             </div>
             <p className="font-medium mt-5">{project.title}</p>
             <p className="text-neutral-700">{project.descr}</p>
@@ -25,13 +33,28 @@ function Work() {
       </div>
 
       <div className="slide delay02 max-w-xl mx-auto mt-20 text-lg">
-        <p className="text-neutral-700 leading-relaxed">I'm Trueman, a Software Engineer based in Maryland. After working on Android for a few years, I decided I wanted to move my career to Web Development. Recently, I've completed <a className="hover:underline" target="_blank" href="https://www.theodinproject.com/">The Odin Project</a>, an open source full stack course, where I learned HTML, CSS, Typescript, React, Nodejs, PostgreSQL, Prisma, and much more.</p>
-        <Link to="/about" className="font-medium mt-5 block">More about me</Link>
+        <p className="text-neutral-700 leading-relaxed">
+          I'm Trueman, a Software Engineer based in Maryland. After working on
+          Android for a few years, I decided I wanted to move my career to Web
+          Development. Recently, I've completed{' '}
+          <a
+            className="hover:underline"
+            target="_blank"
+            href="https://www.theodinproject.com/"
+          >
+            The Odin Project
+          </a>
+          , an open source full stack course, where I learned HTML, CSS,
+          Typescript, React, Nodejs, PostgreSQL, Prisma, and much more.
+        </p>
+        <Link to="/about" className="font-medium mt-5 block">
+          More about me
+        </Link>
       </div>
 
       <Footer />
     </div>
-  )
+  );
 }
 
-export default Work
+export default Work;

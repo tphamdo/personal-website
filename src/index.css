@@ -183,7 +183,7 @@ body {
 }
 
 .image-container:hover {
-  transform: scale(0.95);
+  transform: scale(0.90);
   cursor: pointer;
 }
 
@@ -192,7 +192,7 @@ body {
 }
 
 .project-image:hover {
-  transform: scale(calc(1/0.97));
+  transform: scale(calc(1/0.93));
 }
 
 a:hover {

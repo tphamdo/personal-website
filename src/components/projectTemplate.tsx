@@ -12,13 +12,13 @@ const ProjectTemplate: React.FC<Props> = (props) => {
     <div className={className}>
       <h1 className="text-3xl font-semibold mt-12 slide delay01">{title}</h1>
       <div className="video-container mt-8 aspect-video mx-auto rounded-md overflow-hidden slide delay02">
-        <video controls autoPlay loop muted className="w-full">
+        <video controls autoPlay loop muted className="w-full h-full">
           <source src={videoSrc} type="video/mp4" />
           Sorry, your browser doesn't support embedded videos.
         </video>
       </div>
       <div className="text-right mt-10 slide delay02">
-        <a href={codeLink} className="font-medium px-3">Code</a>
+        <a href={codeLink} target="_blank" className="font-medium px-3">Code</a>
       </div>
     </div>
   )

@@ -41,7 +41,7 @@ function FileUploaderPage() {
       <div className="text-lg mt-8 max-w-xl mx-auto slide delay03">
         <p className="text-xl font-medium">
           File uploader is a Google Drive Clone that allows users to store
-          files. Users may create folders and download any file or folder.
+          files. Users may upload files, create folders, and download any of those files/folders.
         </p>
         <p className="mt-8 text-neutral-800">
           This was a fun project that taught me how to use prisma, a Node.js and

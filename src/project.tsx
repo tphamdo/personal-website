@@ -2,6 +2,7 @@ import { ReactElement } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import projects from './projects';
 import FileUploaderPage from './projectPages/fileUploader';
+import MembersOnlyPage from './projectPages/membersOnly';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
 
@@ -15,6 +16,9 @@ function Project() {
   switch (projectName) {
     case 'fileuploader':
       projectPage = <FileUploaderPage />
+      break;
+    case 'membersonly':
+      projectPage = <MembersOnlyPage />
       break;
     default:
       return <Navigate to='/' />;

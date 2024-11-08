@@ -64,7 +64,7 @@ function FileUploaderPage() {
             dictionary attacks
           </a>
           . To authenticate users, we can compare the entered password to the
-          hash by rehashing the password with the same salt.
+          hash by rehashing the password with the salt stored in the database.
         </p>
         <div className="mt-8">
           <MyCodeBlock code={code} language="javascript" />

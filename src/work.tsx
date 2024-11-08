@@ -12,7 +12,7 @@ function Work() {
         <h1 className="text-4xl font-semibold">Full Stack Developer.</h1>
       </div>
 
-      <div className="flex flex-wrap justify-around gap-y-12 gap-x-8 slide delay01 mt-24 h-fit">
+      <div className="flex flex-wrap justify-around gap-y-12 gap-x-8 slide delay02 mt-24 h-fit">
         {projects.map((project, idx) => (
           <Link
             to={`work/${project.name}`}

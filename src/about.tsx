@@ -168,10 +168,7 @@ function About() {
           <p className="text-neutral-700">
             Currently seeking new opportunities.
           </p>
-          <a
-            href="https://www.linkedin.com/in/trueman-phamdo-691382164/"
-            className="block mt-4"
-          >
+          <a href="https://www.linkedin.com/in/tphamdo" className="block mt-4">
             Linkedin
           </a>
         </div>

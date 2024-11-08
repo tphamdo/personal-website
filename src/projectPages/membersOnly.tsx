@@ -29,12 +29,7 @@ function FileUploaderPage() {
 
   return (
     <div className="max-w-3xl mx-auto">
-      <ProjectTemplate
-        title={project.title}
-        codeLink={project.codeLink}
-        videoSrc={project.videoSrc}
-        className="slide delay01"
-      />
+      <ProjectTemplate project={project} className="slide delay01" />
 
       <div className="text-lg mt-8 max-w-xl mx-auto slide delay03">
         <p className="text-xl font-medium">
@@ -75,8 +70,8 @@ function FileUploaderPage() {
           <MyCodeBlock code={code} language="javascript" />
         </div>
         <p className="mt-6 text-neutral-800">
-          These were the functions I used to generate the hash/salt and to
-          validate user passwords.
+          In the code, you can see the functions used to generate the hash/salt
+          and to validate user passwords.
         </p>
       </div>
     </div>

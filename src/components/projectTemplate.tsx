@@ -1,12 +1,18 @@
-interface Props {
+interface Project {
   title: string;
   codeLink: string;
   videoSrc: string;
+  siteLink?: string;
+}
+
+interface Props {
+  project: Project;
   className: string;
 }
 
 const ProjectTemplate: React.FC<Props> = (props) => {
-  const { title, codeLink, videoSrc, className } = props;
+  const { title, codeLink, videoSrc, siteLink } = props.project;
+  const { className } = props;
 
   return (
     <div className={className}>
@@ -18,10 +24,17 @@ const ProjectTemplate: React.FC<Props> = (props) => {
         </video>
       </div>
       <div className="text-right mt-10 slide delay02">
-        <a href={codeLink} target="_blank" className="font-medium px-3">Code</a>
+        <a href={codeLink} target="_blank" className="font-medium px-3">
+          Code
+        </a>
+        {siteLink && (
+          <a href={siteLink} target="_blank" className="font-medium px-3">
+            Site
+          </a>
+        )}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default ProjectTemplate;

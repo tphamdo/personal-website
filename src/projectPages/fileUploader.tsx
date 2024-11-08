@@ -31,17 +31,13 @@ function FileUploaderPage() {
   if (!project) return <></>;
   return (
     <div className="max-w-3xl mx-auto">
-      <ProjectTemplate
-        title={project.title}
-        codeLink={project.codeLink}
-        videoSrc={project.videoSrc}
-        className="slide delay01"
-      />
+      <ProjectTemplate project={project} className="slide delay01" />
 
       <div className="text-lg mt-8 max-w-xl mx-auto slide delay03">
         <p className="text-xl font-medium">
           File uploader is a Google Drive Clone that allows users to store
-          files. Users may upload files, create folders, and download any of those files/folders.
+          files. Users may upload files, create folders, and download any of
+          those files/folders.
         </p>
         <p className="mt-8 text-neutral-800">
           This was a fun project that taught me how to use prisma, a Node.js and

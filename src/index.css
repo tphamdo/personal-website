@@ -179,20 +179,20 @@ body {
 .image-container {
   overflow: hidden;
   border-radius: 20px;
-  transition: .8s cubic-bezier(0.2, 0.6, 0.2, 1);
+  transition: 0.8s cubic-bezier(0.2, 0.6, 0.2, 1);
 }
 
 .image-container:hover {
-  transform: scale(0.90);
+  transform: scale(0.94);
   cursor: pointer;
 }
 
 .project-image {
-  transition: .8s cubic-bezier(0.2, 0.6, 0.2, 1);
+  transition: 0.8s cubic-bezier(0.2, 0.6, 0.2, 1);
 }
 
 .project-image:hover {
-  transform: scale(calc(1/0.93));
+  transform: scale(calc(1 / 0.96));
 }
 
 a:hover {
@@ -201,8 +201,8 @@ a:hover {
 
 .video-container {
   -webkit-transform: translateZ(0);
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
-  border: 1px solid rgb(200,200,200);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+  border: 1px solid rgb(200, 200, 200);
 }
 
 .rotating-icon {

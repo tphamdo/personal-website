@@ -3,25 +3,33 @@ import { useParams, Navigate } from 'react-router-dom';
 import projects from './projects';
 import FileUploaderPage from './projectPages/fileUploader';
 import MembersOnlyPage from './projectPages/membersOnly';
+import BlogApiPage from './projectPages/blogApi';
+import ShoppingCartPage from './projectPages/shoppingCart';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
 
 function Project() {
   const { projectName } = useParams();
 
-  const project = projects.find(p => p.name === projectName);
-  if (!project) return <Navigate to='/' />;
+  const project = projects.find((p) => p.name === projectName);
+  if (!project) return <Navigate to="/" />;
 
   let projectPage: ReactElement | null = null;
   switch (projectName) {
     case 'fileuploader':
-      projectPage = <FileUploaderPage />
+      projectPage = <FileUploaderPage />;
       break;
     case 'membersonly':
-      projectPage = <MembersOnlyPage />
+      projectPage = <MembersOnlyPage />;
+      break;
+    case 'blogapi':
+      projectPage = <BlogApiPage />;
+      break;
+    case 'shoppingcart':
+      projectPage = <ShoppingCartPage />;
       break;
     default:
-      return <Navigate to='/' />;
+      return <Navigate to="/" />;
   }
 
   return (

@@ -12,21 +12,23 @@ function Work() {
         <h1 className="text-4xl font-semibold">Full Stack Developer.</h1>
       </div>
 
-      <div className="flex flex-wrap justify-center justify-around slide delay01 mt-24">
+      <div className="flex flex-wrap justify-around gap-y-12 gap-x-8 slide delay01 mt-24 h-fit">
         {projects.map((project, idx) => (
           <Link
             to={`work/${project.name}`}
             key={idx}
-            className="project-container text-center hover:no-underline"
+            className="work-item project-container text-center hover:no-underline"
           >
-            <div className="image-container max-h-[450px] aspect-square border-black border-[1px]">
+            <div
+              className={`image-container max-h-[400px] aspect-square border-black border-[1px]`}
+            >
               <img
                 className="project-image h-full"
                 src={project.img}
                 alt="project picture"
               />
             </div>
-            <p className="font-medium mt-5">{project.title}</p>
+            <p className="font-medium mt-4">{project.title}</p>
             <p className="text-neutral-700">{project.descr}</p>
           </Link>
         ))}

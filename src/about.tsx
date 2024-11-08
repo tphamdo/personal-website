@@ -1,6 +1,42 @@
 import Navbar2 from './components/navbar2';
 import Footer from './components/footer';
 import me from './assets/images/me.jpg';
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+  FaLinux,
+  FaJava,
+} from 'react-icons/fa';
+import {
+  BiLogoJavascript,
+  BiLogoTypescript,
+  BiLogoPostgresql,
+  BiLogoCPlusPlus,
+} from 'react-icons/bi';
+import { SiPrisma, SiVim, SiPython, SiExpress, SiJest } from 'react-icons/si';
+
+const SIZE = 60;
+const skillIcons = [
+  <FaHtml5 size={SIZE} title={'HTML5'} />,
+  <FaCss3Alt size={SIZE} title={'CSS3'} />,
+  <BiLogoJavascript size={SIZE} title={'Javascript'} />,
+  <BiLogoTypescript size={SIZE} title={'Typescript'} />,
+  <FaReact size={SIZE} title={'React'} />,
+  <FaNodeJs size={SIZE} title={'Node.js'} />,
+  <BiLogoCPlusPlus size={SIZE} title={'C++'} />,
+  <FaJava size={SIZE} title={'Java'} />,
+  <SiPython size={SIZE} title={'Python'} />,
+  <SiExpress size={SIZE} title={'Express'} />,
+  <SiJest size={SIZE} title={'Jest'} />,
+  <BiLogoPostgresql size={SIZE} title={'PostgreSQL'} />,
+  <SiPrisma size={SIZE} title={'Prisma.io'} />,
+  <FaGitAlt size={SIZE} title={'Git'} />,
+  <SiVim size={SIZE} title={'Vim'} />,
+  <FaLinux size={SIZE} title={'Linux'} />,
+];
 
 interface Experience {
   position: string;
@@ -51,7 +87,6 @@ interface SchoolProps {
   school: Schooling;
 }
 
-
 const School: React.FC<SchoolProps> = (props) => {
   const { school } = props;
   return (
@@ -65,14 +100,14 @@ const School: React.FC<SchoolProps> = (props) => {
 
 const schools = [
   {
-    degree: "Bachelor of Science in Computer Science",
-    school: "University of Maryland, College Park",
-    dates: "2018-2022",
+    degree: 'Bachelor of Science in Computer Science',
+    school: 'University of Maryland, College Park',
+    dates: '2018-2022',
   },
   {
-    degree: "Bachelor of Science in Mathematics",
-    school: "University of Maryland, College Park",
-    dates: "2018-2022",
+    degree: 'Bachelor of Science in Mathematics',
+    school: 'University of Maryland, College Park',
+    dates: '2018-2022',
   },
 ];
 
@@ -91,8 +126,8 @@ function About() {
             projects as well as higher-level Android projects. Recently, I
             decided to transition my career into Web Development. I completed{' '}
             <a href="https://www.theodinproject.com/">The Odin Project</a>, an
-            open source full stack course, where I have done a ton of cool
-            projects which you can find on this site.
+            open source full stack course, where I got to work on a ton of cool
+            projects, some of which you can find on this site.
           </p>
         </div>
         <img
@@ -100,27 +135,45 @@ function About() {
           src={me}
           alt="picture of me"
         />
-        <div className="max-w-xl mx-auto slide delay02 mt-12">
-          <h1 className="text-2xl font-medium">Work Experiences</h1>
+        {skillIcons.length > 0 && (
+          <div className="max-w-lg mx-auto slide delay02 mt-20">
+            <div className="slide delay02 mt-2 flex flex-wrap gap-4 justify-center">
+              {skillIcons.map((icon, idx) => (
+                <div key={idx}>{icon}</div>
+              ))}
+            </div>
+          </div>
+        )}
+        <div className="max-w-xl mx-auto slide delay02 mt-16">
+          <h1 className="text-2xl font-medium">Work Experience</h1>
           <div className="mt-4 grid grid-cols-1 md:grid-cols-2">
-            {experiences.map((experience) => (
-              <WorkExperience experience={experience} />
+            {experiences.map((experience, idx) => (
+              <WorkExperience key={idx} experience={experience} />
             ))}
           </div>
         </div>
         <div className="max-w-xl mx-auto slide delay02 mt-8">
           <h1 className="text-2xl font-medium">Education</h1>
           <div className="mt-4 grid grid-cols-1">
-            {schools.map((school) => (
-              <School school={school} />
+            {schools.map((school, idx) => (
+              <School key={idx} school={school} />
             ))}
           </div>
         </div>
         <div className="max-w-xl mx-auto slide delay02 mt-8">
           <h1 className="text-2xl font-medium">Contact</h1>
-          <p className="text-neutral-700 mt-4">Feel free to reach out for collaborations, or just to say hello!</p>
-          <p className="text-neutral-700">Currently seeking new opportunities.</p>
-          <a href="https://www.linkedin.com/in/trueman-phamdo-691382164/" className="block mt-4">Linkedin</a>
+          <p className="text-neutral-700 mt-4">
+            Feel free to reach out for collaborations, or just to say hello!
+          </p>
+          <p className="text-neutral-700">
+            Currently seeking new opportunities.
+          </p>
+          <a
+            href="https://www.linkedin.com/in/trueman-phamdo-691382164/"
+            className="block mt-4"
+          >
+            Linkedin
+          </a>
         </div>
       </div>
       <Footer />

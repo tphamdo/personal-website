@@ -5,6 +5,7 @@ import FileUploaderPage from './projectPages/fileUploader';
 import MembersOnlyPage from './projectPages/membersOnly';
 import BlogApiPage from './projectPages/blogApi';
 import ShoppingCartPage from './projectPages/shoppingCart';
+import BattleshipPage from './projectPages/battleship';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
 
@@ -27,6 +28,9 @@ function Project() {
       break;
     case 'shoppingcart':
       projectPage = <ShoppingCartPage />;
+      break;
+    case 'battleship':
+      projectPage = <BattleshipPage />;
       break;
     default:
       return <Navigate to="/" />;

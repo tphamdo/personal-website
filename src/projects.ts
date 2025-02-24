@@ -2,8 +2,18 @@ import fileUploaderImage from './assets/images/file-uploader-screenshot.webp';
 import membersOnlyImage from './assets/images/members-only.png';
 import blogApiImage from './assets/images/blog-api.png';
 import shoppingCartImage from './assets/images/shopping-cart.png';
+import battleshipImage from './assets/images/battleship.png';
 
 const projects = [
+  {
+    title: 'Battleship',
+    descr: 'Multiplayer Game',
+    name: 'battleship',
+    videoSrc:
+      'https://d3tc3tvjs941dn.cloudfront.net/projects/battleship/battleship.mp4',
+    img: battleshipImage,
+    codeLink: 'https://github.com/tphamdo/battleship-v2',
+  },
   {
     title: 'Blog Api',
     descr: 'A Simple Blog Site',
